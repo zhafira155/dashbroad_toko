@@ -5,7 +5,6 @@ if (isset($_POST['hapus'])) {
     $id = (int) $_GET['id'];
     include 'koneksi.php';
 
-    // ambil nama gambar dulu supaya filenya ikut terhapus
     $cek  = mysqli_query($dbconnect, "SELECT gambar_produk FROM produk WHERE id_produk = '$id'");
     $data = mysqli_fetch_assoc($cek);
 
