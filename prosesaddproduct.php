@@ -9,7 +9,6 @@ if (isset($_POST['simpan'])) {
     $stok     = (int) $_POST['stok'];
     $kategori = mysqli_real_escape_string($dbconnect, $_POST['kategori']);
 
-    // upload gambar ke folder gambar/
     $gambar = time() . "_" . basename($_FILES['gambar']['name']);
     move_uploaded_file($_FILES['gambar']['tmp_name'], "gambar/" . $gambar);
 
