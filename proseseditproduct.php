@@ -11,7 +11,6 @@ if (isset($_POST['update'])) {
     $kategori = mysqli_real_escape_string($dbconnect, $_POST['kategori']);
 
     if ($_FILES['gambar']['name'] != "") {
-        // ada gambar baru: upload, lalu hapus gambar lama
         $cek  = mysqli_query($dbconnect, "SELECT gambar_produk FROM produk WHERE id_produk = '$id'");
         $lama = mysqli_fetch_assoc($cek);
 
@@ -30,7 +29,7 @@ if (isset($_POST['update'])) {
                     harga         = '$harga'
                   WHERE id_produk = '$id'";
     } else {
-        // gambar tidak diganti
+       
         $query = "UPDATE produk SET
                     nama_produk = '$produk',
                     kategori    = '$kategori',
