@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+     <h1 class="h2">Customer</h1>
+    <p>Selamat datang di halaman customer</p>
+    <hr>
 </body>
 </html>
